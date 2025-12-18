@@ -1,7 +1,6 @@
-
-<p align="center">
-  <h3>🏴‍☠️ GrandLine Store – E-Commerce Website</h3>
-  <hr>
+ ## 🏴‍☠️ GrandLine Store – E-Commerce Website
+ 
+<p>
   ⚓ A One Piece–Inspired E-Commerce Name --- GrandLine ⚓
 </p>
 
@@ -48,5 +47,6 @@ npm install
 
 # Start the application
 npm start
+
 
 
