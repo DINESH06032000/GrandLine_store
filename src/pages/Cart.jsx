@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useAppContext } from '../AppContext';
 import './Cart.css';
 import productsData from '../data/products.json';
-import { useAppContext } from '../AppContext';
-
-
 
 const Cart = () => {
     // Context
@@ -87,7 +85,7 @@ const Cart = () => {
                                         <button className="qty-btn" onClick={() => updateQuantity(item.id, item.quantity + 1)}><i className="fa-solid fa-plus"></i></button>
                                     </div>
                                     <button className="remove-btn" onClick={() => removeFromCart(item.id)}>
-                                        <i className="fa-regular fa-trash-can"></i>
+                                        <i className="fa-regular fa-trash-can"></i> Remove
                                     </button>
                                 </div>
                             </div>
@@ -120,9 +118,9 @@ const Cart = () => {
                                 <span>Total</span>
                                 <span>₹{total.toFixed(2)}</span>
                             </div>
-                            <button className="checkout-btn" onClick={() => alert('Proceeding to checkout...')}>
+                            <Link to="/payment" className="checkout-btn">
                                 Checkout <i className="fa-solid fa-arrow-right"></i>
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 )}
@@ -154,7 +152,7 @@ const Cart = () => {
             </div>
 
             <footer>
-                &copy; 2025 GrandLine. All rights reserved. Secure Checkout.
+                &copy; 2025 MasterKart. All rights reserved. Secure Checkout.
             </footer>
         </div>
     );
