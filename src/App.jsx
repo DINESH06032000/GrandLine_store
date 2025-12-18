@@ -28,7 +28,7 @@ const ScrollToTop = () => {
 
 const App = () => {
   return (
-    <BrowserRouter basename="/GrandLine/">
+    <BrowserRouter>
       <ScrollToTop />
       <Routes>
         {/* Pages inside the Main Layout (Nav) */}
